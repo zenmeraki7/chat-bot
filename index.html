@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta AI</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #000; 
+            color: #fff;
+            font-family: sans-serif;
+            overflow-x: hidden; 
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #ffffff;
+            font-size: 2rem;
+            padding-left: 70px;
+        }
+
+        .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: large;
+            font-weight: bold;
+        }
+
+        .hero {
+            position: relative;
+            min-height: 100vh; 
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .hero-text {
+            text-align: center;
+            position: relative; /* Position text on top of video */
+            z-index: 1;
+            padding-top: 250px; /* Add top padding for better visual balance */
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        /*  */
+        .meta-container {
+            font-family: 'Arial', sans-serif;
+            color: #ffffff;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .meta-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .meta-description {
+            font-size: 1rem;
+            margin-bottom: 30px;
+        }
+        .meta-button {
+            font-size: 1rem;
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+
+        /*  */
+        .feature-card {
+            background-color: #f8f9fa; /* Light gray background */
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .feature-card img {
+            /* max-width: 150px; */
+            margin-bottom: 20px;
+            width: 100%;
+            height: 400px;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 16px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+        <a class="navbar-brand" href="#">CHAT-BOT</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Our approach</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Product experiences</a>
+                </li>
+                
+                <li class="nav-item">
+                    <button type="button" class="btn btn-primary">Try Meta AI</button> 
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <video class="hero-video" autoplay loop muted>
+            <source src="./media/7534244-hd_1920_1080_25fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 hero-text">
+                    <h1>Discover limitless possibilities with CHAT-BOT</h1>
+                    <p>A chatbot is an AI-powered software that simulates human conversations, providing assistance, support, or information through text or voice.</p>
+                    <button class="btn btn-primary meta-button">Ask Meta AI anything</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- next section -->
+    <div class="meta-container">
+        <h1 class="meta-title">Get more out of every moment with <br> Meta AI's latest features</h1>
+        <p class="meta-description">
+            We've added voice and the ability to ask Meta AI about your photos. <br>
+            Find Meta AI in our apps, glasses, and on the web, in select languages <br> and countries only, with more coming soon.
+        </p>
+        <button class="btn btn-primary meta-button">Ask Meta AI anything</button>
+    </div>
+
+    <!-- next section -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="feature-card">
+                    <img src="https://img.freepik.com/premium-vector/chatbot-neural-network-ai-servers-robots-technology-cute-chatbot-ai-character_651808-563.jpg" alt="Chatbot"> 
+                    <h3>Talk with Meta AI on the go</h3>
+                    <p>Meta AI can now be your live conversation partner, whether to discuss a problem or hear a story. Pick from a range of AI voices, including some familiar ones from Kristen Bell, Awkwafina and more.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="feature-card">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4a/6c/e5/4a6ce517-06dc-2450-555d-a453808668df/6236dec7-0cfc-4913-abc0-acdb2f5bdba0_2.jpg/643x0w.jpg" alt="Camera"> 
+                    <h3>Learn about the world around you</h3>
+                    <p>Take a photo and ask Meta AI to identify the details. With your instruction, Meta AI can also edit images and generate creative captions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

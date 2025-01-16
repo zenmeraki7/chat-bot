@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meta AI</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         body {
-            background-color: #000; 
+            background-color: #000;
             color: #fff;
             font-family: sans-serif;
-            overflow-x: hidden; 
+            overflow-x: hidden;
         }
 
         .navbar-brand {
@@ -28,7 +30,7 @@
 
         .hero {
             position: relative;
-            min-height: 100vh; 
+            min-height: 100vh;
         }
 
         .hero-video {
@@ -43,9 +45,11 @@
 
         .hero-text {
             text-align: center;
-            position: relative; /* Position text on top of video */
+            position: relative;
+            /* Position text on top of video */
             z-index: 1;
-            padding-top: 250px; /* Add top padding for better visual balance */
+            padding-top: 250px;
+            /* Add top padding for better visual balance */
         }
 
         .hero-text h1 {
@@ -66,15 +70,18 @@
             text-align: center;
             margin-top: 100px;
         }
+
         .meta-title {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 20px;
         }
+
         .meta-description {
             font-size: 1rem;
             margin-bottom: 30px;
         }
+
         .meta-button {
             font-size: 1rem;
             padding: 10px 20px;
@@ -82,8 +89,46 @@
         }
 
         /*  */
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            width: 100%;
+            
+            /* Ensure it spans the entire width of the image */
+            padding: 0 10px;
+            /* Optional padding to ensure text doesn't touch the edges */
+        }
+
+        .carousel-caption h1 {
+            font-size: 4rem;
+            color: #000;
+            background-color: rgba(146, 174, 202, 0.6);
+            /* Light background with some transparency */
+            width: 100%;
+            /* Full width for heading */
+            padding: 10px 0;
+            /* Optional padding to ensure the heading stands out */
+        }
+
+        .carousel-caption p {
+            font-size: 1.2rem;
+            color: #000;
+            width: 100%;
+            /* Full width for the paragraph */
+            padding: 0 15px;
+            /* Optional padding to add space around the text */
+        }
+
+
+
+        /*  */
         .feature-card {
-            background-color: #f8f9fa; /* Light gray background */
+            background-color: #f8f9fa;
+            /* Light gray background */
             border-radius: 10px;
             padding: 30px;
             margin-bottom: 30px;
@@ -106,13 +151,97 @@
             font-size: 16px;
             color: #6c757d;
         }
+
+        /*  */
+        .card {
+            background-color: #222;
+            border: none;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .sliding-cards {
+            display: flex;
+            overflow-x: hidden;
+            gap: 1rem;
+            padding: 1rem;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .sliding-card {
+            flex: 0 0 300px;
+        }
+
+        /*  */
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .pricing-card {
+            background-color: #222;
+            border: none;
+            border-radius: 8px;
+            padding: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .pricing-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+        }
+
+        .pricing-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-card p {
+            margin-bottom: 1rem;
+        }
+
+        .pricing-card .price {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-primary1 {
+            background-color: #444444;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+        }
+
+        .btn-primary1:hover {
+            background-color: #666;
+        }
+
+        .feature-list {
+            text-align: left;
+            margin-top: 1rem;
+        }
+
+        .feature-list li {
+            margin-bottom: 0.5rem;
+        }
     </style>
 </head>
+
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
         <a class="navbar-brand" href="#">CHAT-BOT</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -126,9 +255,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Product experiences</a>
                 </li>
-                
+
                 <li class="nav-item">
-                    <button type="button" class="btn btn-primary">Try Meta AI</button> 
+                    <button type="button" class="btn btn-primary">Try Meta AI</button>
                 </li>
             </ul>
         </div>
@@ -143,10 +272,11 @@
             <div class="row">
                 <div class="col-md-8 offset-md-2 hero-text">
                     <h1>Discover limitless possibilities with CHAT-BOT</h1>
-                    <p>A chatbot is an AI-powered software that simulates human conversations, providing assistance, support, or information through text or voice.</p>
+                    <p>A chatbot is an AI-powered software that simulates human conversations, providing assistance,
+                        support, or information through text or voice.</p>
                     <button class="btn btn-primary meta-button">Ask Meta AI anything</button>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -156,7 +286,8 @@
         <h1 class="meta-title">Get more out of every moment with <br> Meta AI's latest features</h1>
         <p class="meta-description">
             We've added voice and the ability to ask Meta AI about your photos. <br>
-            Find Meta AI in our apps, glasses, and on the web, in select languages <br> and countries only, with more coming soon.
+            Find Meta AI in our apps, glasses, and on the web, in select languages <br> and countries only, with more
+            coming soon.
         </p>
         <button class="btn btn-primary meta-button">Ask Meta AI anything</button>
     </div>
@@ -166,20 +297,227 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="feature-card">
-                    <img src="https://img.freepik.com/premium-vector/chatbot-neural-network-ai-servers-robots-technology-cute-chatbot-ai-character_651808-563.jpg" alt="Chatbot"> 
+                    <img src="https://img.freepik.com/premium-vector/chatbot-neural-network-ai-servers-robots-technology-cute-chatbot-ai-character_651808-563.jpg"
+                        alt="Chatbot">
                     <h3>Talk with Meta AI on the go</h3>
-                    <p>Meta AI can now be your live conversation partner, whether to discuss a problem or hear a story. Pick from a range of AI voices, including some familiar ones from Kristen Bell, Awkwafina and more.</p>
+                    <p>Meta AI can now be your live conversation partner, whether to discuss a problem or hear a story.
+                        Pick from a range of AI voices, including some familiar ones from Kristen Bell, Awkwafina and
+                        more.</p>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="feature-card">
-                    <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4a/6c/e5/4a6ce517-06dc-2450-555d-a453808668df/6236dec7-0cfc-4913-abc0-acdb2f5bdba0_2.jpg/643x0w.jpg" alt="Camera"> 
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4a/6c/e5/4a6ce517-06dc-2450-555d-a453808668df/6236dec7-0cfc-4913-abc0-acdb2f5bdba0_2.jpg/643x0w.jpg"
+                        alt="Camera">
                     <h3>Learn about the world around you</h3>
-                    <p>Take a photo and ask Meta AI to identify the details. With your instruction, Meta AI can also edit images and generate creative captions.</p>
+                    <p>Take a photo and ask Meta AI to identify the details. With your instruction, Meta AI can also
+                        edit images and generate creative captions.</p>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- next sectiion -->
+    <div class="container-fluid my-5">
+        <!-- First Row (Scroll Left to Right) -->
+        <div id="slidingCards1" class="sliding-cards">
+            <div class="sliding-card">
+                <div class="card p-3">
+                    <p>Write a text inviting my neighbors to a barbecue →</p>
+                </div>
+            </div>
+            <div class="sliding-card">
+                <div class="card p-3">
+                    <p>Give me ideas for what to do with my kids' art →</p>
+                </div>
+            </div>
+            <div class="sliding-card">
+                <div class="card p-3">
+                    <p>Help me study vocabulary for a college entrance exam →</p>
+                </div>
+            </div>
+            <div class="sliding-card">
+                <div class="card p-3">
+                    <p>Give me ideas about how to plan my New Year's resolutions →</p>
+                </div>
+            </div>
+            <div class="sliding-card">
+                <div class="card p-3">
+                    <p>Explain nostalgia to a kindergartener →</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Row (Scroll Right to Left) -->
+        <div id="slidingCards2" class="sliding-cards">
+            <div class="sliding-card">
+                <div class="card p-3">
+                    <p>Write a text inviting my neighbors to a barbecue →</p>
+                </div>
+            </div>
+            <div class="sliding-card">
+                <div class="card p-3">
+                    <p>Give me ideas for what to do with my kids' art →</p>
+                </div>
+            </div>
+            <div class="sliding-card">
+                <div class="card p-3">
+                    <p>Help me study vocabulary for a college entrance exam →</p>
+                </div>
+            </div>
+            <div class="sliding-card">
+                <div class="card p-3">
+                    <p>Give me ideas about how to plan my New Year's resolutions →</p>
+                </div>
+            </div>
+            <div class="sliding-card">
+                <div class="card p-3">
+                    <p>Explain nostalgia to a kindergartener →</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- third Row (Scroll right to left) -->
+        <div id="slidingCards3" class="sliding-cards">
+            <div class="sliding-card">
+                <div class="card p-3">
+                    <p>Write a text inviting my neighbors to a barbecue →</p>
+                </div>
+            </div>
+            <div class="sliding-card">
+                <div class="card p-3">
+                    <p>Give me ideas for what to do with my kids' art →</p>
+                </div>
+            </div>
+            <div class="sliding-card">
+                <div class="card p-3">
+                    <p>Help me study vocabulary for a college entrance exam →</p>
+                </div>
+            </div>
+            <div class="sliding-card">
+                <div class="card p-3">
+                    <p>Give me ideas about how to plan my New Year's resolutions →</p>
+                </div>
+            </div>
+            <div class="sliding-card">
+                <div class="card p-3">
+                    <p>Explain nostalgia to a kindergartener →</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- next section -->
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="https://fintech.com.br/app/uploads/2024/01/whatsapp-chatbot-scaled.jpg" class="d-block w-100"
+                    style="height: 600px;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1><b>Examine data and visualize it through various charts</b>.</h1>
+                    <p>Analyze and interpret data using visual representations like charts to uncover insights, trends,
+                        and patterns. Employ tools or libraries such as Matplotlib, D3.js, or Tableau to create
+                        visualizations, enhancing data understanding and communication. Specify chart types and goals
+                        for tailored and impactful analysis</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://website-assets-fw.freshworks.com/attachments/ck340ov180hsy65g0yxb6gbhb-1-chatbots-for-marketing-smm.one-half.png"
+                    class="d-block w-100" style="height: 600px;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Discuss the content and details of the image.</h1>
+                    <p>Describe the image by highlighting its key elements, composition, and any significant details.
+                        Provide context and insights into the visuals, emphasizing the mood, themes, and message
+                        conveyed. This helps to convey a deeper understanding of the image and its impact, fostering a
+                        clearer interpretation for the audience.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://lh3.googleusercontent.com/proxy/QbH2x0FxOZUx3snQjXb8AyAvsZxNIYAq4Age2clMqlxGlwH6PJyaeRQjn6K-Vt774FvFJFqjwHaWTPwCW6GHTsJpc6fUdpK6TBOtGPg1O5QiOi7Tio4IbVPV"
+                    class="d-block w-100" style="height: 600px;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Generate images</h1>
+                    <p>Generate visual content by creating images based on specific descriptions. This process involves
+                        transforming ideas into visual representations, helping to communicate concepts or convey
+                        messages through customized imagery.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- next section -->
+    <div class="container my-5">
+        <!-- Header -->
+        <div class="pricing-header">
+            <h1>Get started with Chat-bot today</h1>
+            <p>View pricing plans</p>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div class="row">
+            <!-- Free Plan -->
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h2>Free</h2>
+                    <p class="price">$0 / month</p>
+                    <p>Explore how AI can help with everyday tasks</p>
+                    <button class="btn btn-primary1">Get Free</button>
+                    <ul class="feature-list">
+                        <li>Access to GPT-4o mini</li>
+                        <li>Standard voice mode</li>
+                        <li>Limited access to GPT-4o</li>
+                        <li>Limited file uploads</li>
+                        <li>Use custom GPTs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Plus Plan -->
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h2>Plus</h2>
+                    <p class="price">$20 / month</p>
+                    <p>Level up productivity and creativity with expanded access</p>
+                    <button class="btn btn-primary1">Get Plus</button>
+                    <ul class="feature-list">
+                        <li>Everything in Free</li>
+                        <li>Extended limits on messaging</li>
+                        <li>Standard and advanced voice mode</li>
+                        <li>Opportunities to test new features</li>
+                        <li>Create and use custom GPTs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Pro Plan -->
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h2>Pro</h2>
+                    <p class="price">$200 / month</p>
+                    <p>Get the best of OpenAI with the highest level of access</p>
+                    <button class="btn btn-primary1">Get Pro</button>
+                    <ul class="feature-list">
+                        <li>Everything in Plus</li>
+                        <li>Unlimited access to GPT-4o and o1</li>
+                        <li>Unlimited access to advanced voice</li>
+                        <li>Access to o1 pro mode</li>
+                        <li>Custom GPTs and usage policies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -187,4 +525,35 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
+<script>
+    function autoScroll(container, speed, direction = 'left') {
+        let scrollAmount = 0;
+        const maxScroll = container.scrollWidth - container.clientWidth;
+
+        setInterval(() => {
+            if (direction === 'left') {
+                scrollAmount += speed;
+                if (scrollAmount >= maxScroll) scrollAmount = 0; // Reset scroll
+            } else {
+                scrollAmount -= speed;
+                if (scrollAmount <= 0) scrollAmount = maxScroll; // Reset scroll
+            }
+            container.scrollLeft = scrollAmount;
+        }, 20); // Adjust interval for smooth scrolling
+    }
+
+    // First row scrolls left to right
+    const slidingCards1 = document.getElementById('slidingCards1');
+    autoScroll(slidingCards1, 1, 'left');
+
+    // Second row scrolls right to left
+    const slidingCards2 = document.getElementById('slidingCards2');
+    autoScroll(slidingCards2, 1, 'right');
+
+    // First row scrolls left to right
+    const slidingCards3 = document.getElementById('slidingCards3');
+    autoScroll(slidingCards3, 1, 'left');
+
+</script>
+
 </html>
